@@ -1,0 +1,91 @@
+symbol,rows,train_rows,test_rows,accuracy,model_path,report
+CTG,199,159,40,0.7,models\trained_models\CTG_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.61      0.94      0.74        18
+           1       0.92      0.50      0.65        22
+
+    accuracy                           0.70        40
+   macro avg       0.76      0.72      0.69        40
+weighted avg       0.78      0.70      0.69        40
+"
+FPT,199,159,40,0.725,models\trained_models\FPT_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.78      0.67      0.72        21
+           1       0.68      0.79      0.73        19
+
+    accuracy                           0.72        40
+   macro avg       0.73      0.73      0.72        40
+weighted avg       0.73      0.72      0.72        40
+"
+MBB,199,159,40,0.65,models\trained_models\MBB_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.58      0.95      0.72        19
+           1       0.89      0.38      0.53        21
+
+    accuracy                           0.65        40
+   macro avg       0.73      0.66      0.63        40
+weighted avg       0.74      0.65      0.62        40
+"
+MWG,199,159,40,0.6,models\trained_models\MWG_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.57      1.00      0.72        21
+           1       1.00      0.16      0.27        19
+
+    accuracy                           0.60        40
+   macro avg       0.78      0.58      0.50        40
+weighted avg       0.77      0.60      0.51        40
+"
+TPB,199,159,40,0.55,models\trained_models\TPB_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.64      0.33      0.44        21
+           1       0.52      0.79      0.62        19
+
+    accuracy                           0.55        40
+   macro avg       0.58      0.56      0.53        40
+weighted avg       0.58      0.55      0.53        40
+"
+VCB,199,159,40,0.55,models\trained_models\VCB_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.55      1.00      0.71        22
+           1       0.00      0.00      0.00        18
+
+    accuracy                           0.55        40
+   macro avg       0.28      0.50      0.35        40
+weighted avg       0.30      0.55      0.39        40
+"
+VHM,199,159,40,0.7,models\trained_models\VHM_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.74      0.80      0.77        25
+           1       0.62      0.53      0.57        15
+
+    accuracy                           0.70        40
+   macro avg       0.68      0.67      0.67        40
+weighted avg       0.69      0.70      0.70        40
+"
+VIC,199,159,40,0.5,models\trained_models\VIC_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.61      0.46      0.52        24
+           1       0.41      0.56      0.47        16
+
+    accuracy                           0.50        40
+   macro avg       0.51      0.51      0.50        40
+weighted avg       0.53      0.50      0.50        40
+"
+VNINDEX,199,159,40,0.575,models\trained_models\VNINDEX_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.54      1.00      0.70        20
+           1       1.00      0.15      0.26        20
+
+    accuracy                           0.57        40
+   macro avg       0.77      0.57      0.48        40
+weighted avg       0.77      0.57      0.48        40
+"
+VRE,199,159,40,0.6,models\trained_models\VRE_rf.pkl,"              precision    recall  f1-score   support
+
+           0       0.90      0.38      0.53        24
+           1       0.50      0.94      0.65        16
+
+    accuracy                           0.60        40
+   macro avg       0.70      0.66      0.59        40
+weighted avg       0.74      0.60      0.58        40
+"

@@ -2,18 +2,21 @@
 PROJECT: ai_trading_vn
 LAST UPDATED: 2026-02-08
 
-CURRENT MODULE: 2 - Feature Engineering
+CURRENT MODULE: 3 - Machine Learning Core
 MODULE STATUS: IN PROGRESS
 
 RECENT WORK:
-- Completed Module 1 (Data Engine) pipeline
-- Added features/technical.py for technical indicators pipeline
-- Technical features saved to CSV and SQLite (features_technical)
+- Completed Module 2 pipeline with pruned feature outputs
+- Added models/trainer.py for RandomForest training
+- Trainer builds target price_up_next_3_days and walk-forward split
+- Trained 10 models successfully (199 rows each, 159 train / 40 test)
+- Saved training summary to models/trained_models/training_summary.csv
+- Added models/predictor.py for inference pipeline
 
 NEXT TASK:
-- Run technical features pipeline on cleaned data
-- Review feature outputs and handle NaN warmup
-- Add additional feature transforms if needed (returns, volatility, lags)
+- Run predictor to generate latest signals
+- Review prediction outputs and thresholds
+- Consider expanding history_days for more training data
 
 ERRORS/ISSUES (neu co):
 - Previous yfinance failures for CTG/MBB; switched to vnstock

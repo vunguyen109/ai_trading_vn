@@ -21,6 +21,7 @@ jupyter==1.0.0
 ipython==8.22.2
 black==24.1.1
 pytest==7.4.4
+scikit-learn==1.4.2
 
 # Python 3.12 compatibility
 typing-extensions==4.10.0

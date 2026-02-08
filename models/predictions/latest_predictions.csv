@@ -1,0 +1,11 @@
+symbol,date,pred_up_next_3_days,prob_up,model_path
+CTG,2026-02-06 00:00:00,0,0.2841666666666667,models\trained_models\CTG_rf.pkl
+FPT,2026-02-06 00:00:00,1,0.6311666666666667,models\trained_models\FPT_rf.pkl
+MBB,2026-02-06 00:00:00,0,0.15341666666666667,models\trained_models\MBB_rf.pkl
+MWG,2026-02-06 00:00:00,0,0.255,models\trained_models\MWG_rf.pkl
+TPB,2026-02-06 00:00:00,1,0.8699796365914787,models\trained_models\TPB_rf.pkl
+VCB,2026-02-06 00:00:00,0,0.3879761904761904,models\trained_models\VCB_rf.pkl
+VHM,2026-02-06 00:00:00,0,0.44916666666666677,models\trained_models\VHM_rf.pkl
+VIC,2026-02-06 00:00:00,0,0.4926904761904762,models\trained_models\VIC_rf.pkl
+VNINDEX,2026-02-06 00:00:00,0,0.35911904761904767,models\trained_models\VNINDEX_rf.pkl
+VRE,2026-02-06 00:00:00,1,0.8505075187969926,models\trained_models\VRE_rf.pkl

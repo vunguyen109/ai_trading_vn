@@ -116,6 +116,8 @@ def compute_features(df: pd.DataFrame, cfg: Dict) -> pd.DataFrame:
 
         for w in window_sizes:
             df[f"close_lag_{w}"] = df["close"].shift(w)
+            if w >= 2:
+                df[f"return_vol_{w}"] = df["return_1d"].rolling(w).std(ddof=0)
 
     if "rsi" in indicators and "close" in df.columns:
         df["rsi_14"] = rsi(df["close"], 14)
@@ -144,6 +146,77 @@ def compute_features(df: pd.DataFrame, cfg: Dict) -> pd.DataFrame:
     return df
 
 
+def apply_feature_rules(df: pd.DataFrame, cfg: Dict) -> pd.DataFrame:
+    df = df.copy()
+    window_sizes = cfg.get("features", {}).get("window_sizes", [1, 3, 5, 10])
+    warmup = max([50, 20, 14, max(window_sizes)])
+
+    if "date" in df.columns:
+        df = df.sort_values("date")
+
+    df = df.iloc[warmup:].reset_index(drop=True)
+
+    # Keep rows with valid core fields
+    core = [c for c in ["close", "return_1d"] if c in df.columns]
+    if core:
+        df = df.dropna(subset=core)
+
+    numeric_cols = [c for c in df.columns if c not in ["symbol", "date"]]
+    if numeric_cols:
+        df[numeric_cols] = df[numeric_cols].ffill().bfill()
+        df = df.dropna(subset=numeric_cols)
+    return df
+
+
+def correlation_report(df: pd.DataFrame, target_cols: List[str]) -> pd.DataFrame:
+    numeric_df = df.select_dtypes(include=[np.number]).copy()
+    if numeric_df.empty:
+        return pd.DataFrame()
+
+    rows = []
+    for target in target_cols:
+        if target not in numeric_df.columns:
+            continue
+        corr = numeric_df.corr()[target].drop(labels=[target])
+        for feature, value in corr.items():
+            rows.append({"target": target, "feature": feature, "corr": value})
+
+    if not rows:
+        return pd.DataFrame()
+    return pd.DataFrame(rows).sort_values(["target", "corr"], ascending=[True, False])
+
+
+def prune_features(
+    df: pd.DataFrame,
+    corr_df: pd.DataFrame,
+    target_cols: List[str],
+    min_abs_corr: float,
+    max_features: int,
+) -> pd.DataFrame:
+    if corr_df.empty:
+        return df
+
+    feature_cols = [c for c in df.columns if c not in ["symbol", "date"] + target_cols]
+    if not feature_cols:
+        return df
+
+    corr_df = corr_df[corr_df["feature"].isin(feature_cols)].copy()
+    corr_df["abs_corr"] = corr_df["corr"].abs()
+    corr_df = corr_df[corr_df["abs_corr"] >= min_abs_corr]
+    if corr_df.empty:
+        return df
+
+    corr_df = corr_df.sort_values("abs_corr", ascending=False)
+    if max_features > 0:
+        corr_df = corr_df.head(max_features)
+
+    keep = set(corr_df["feature"].tolist())
+    keep |= set(target_cols)
+    keep |= {"symbol", "date"}
+    keep_cols = [c for c in df.columns if c in keep]
+    return df[keep_cols]
+
+
 def save_csv(df: pd.DataFrame, out_path: str) -> None:
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     df.to_csv(out_path, index=False)
@@ -164,9 +237,22 @@ def init_db(engine: Engine) -> None:
                 """
             )
         )
+        conn.execute(
+            text(
+                """
+                CREATE TABLE IF NOT EXISTS features_technical_pruned (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    symbol TEXT NOT NULL,
+                    date TEXT NOT NULL,
+                    data JSON,
+                    UNIQUE(symbol, date)
+                )
+                """
+            )
+        )
 
 
-def save_to_sqlite(engine: Engine, df: pd.DataFrame, symbol: str) -> None:
+def save_to_sqlite(engine: Engine, df: pd.DataFrame, symbol: str, table: str) -> None:
     if df.empty or "date" not in df.columns:
         return
 
@@ -186,11 +272,11 @@ def save_to_sqlite(engine: Engine, df: pd.DataFrame, symbol: str) -> None:
     with engine.begin() as conn:
         conn.execute(
             text(
-                "DELETE FROM features_technical WHERE symbol = :symbol AND date BETWEEN :start AND :end"
+                f"DELETE FROM {table} WHERE symbol = :symbol AND date BETWEEN :start AND :end"
             ),
             {"symbol": symbol, "start": min_date, "end": max_date},
         )
-        df_db.to_sql("features_technical", conn, if_exists="append", index=False)
+        df_db.to_sql(table, conn, if_exists="append", index=False)
 
 
 def run_pipeline(config_path: str, symbols: List[str] | None, input_dir: str, output_dir: str) -> None:
@@ -208,6 +294,12 @@ def run_pipeline(config_path: str, symbols: List[str] | None, input_dir: str, ou
     engine = create_engine(f"sqlite:///{db_path}")
     init_db(engine)
 
+    report_dir = os.path.join(output_dir, "_reports")
+    pruned_dir = os.path.join(output_dir, "_pruned")
+    selection_cfg = cfg.get("features", {}).get("feature_selection", {})
+    corr_targets = selection_cfg.get("corr_targets", ["return_1d", "close"])
+    min_abs_corr = float(selection_cfg.get("min_abs_corr", 0.05))
+    max_features = int(selection_cfg.get("max_features", 50))
     logger.info("Generating features from %d files", len(files))
     for path in files:
         if not os.path.exists(path):
@@ -216,13 +308,30 @@ def run_pipeline(config_path: str, symbols: List[str] | None, input_dir: str, ou
         df = pd.read_csv(path)
         symbol = df["symbol"].iloc[0] if "symbol" in df.columns else os.path.splitext(os.path.basename(path))[0]
         df_feat = compute_features(df, cfg)
+        df_feat = apply_feature_rules(df_feat, cfg)
 
         out_path = os.path.join(output_dir, f"{symbol}.csv")
         save_csv(df_feat, out_path)
         logger.info("Saved %s", out_path)
 
-        save_to_sqlite(engine, df_feat, symbol)
+        save_to_sqlite(engine, df_feat, symbol, "features_technical")
         logger.info("Upserted %s into SQLite", symbol)
+
+        corr_df = correlation_report(df_feat, corr_targets)
+        if not corr_df.empty:
+            os.makedirs(report_dir, exist_ok=True)
+            corr_path = os.path.join(report_dir, f"{symbol}_corr.csv")
+            corr_df.to_csv(corr_path, index=False)
+            logger.info("Saved %s", corr_path)
+
+        df_pruned = prune_features(df_feat, corr_df, corr_targets, min_abs_corr, max_features)
+        os.makedirs(pruned_dir, exist_ok=True)
+        pruned_path = os.path.join(pruned_dir, f"{symbol}.csv")
+        save_csv(df_pruned, pruned_path)
+        logger.info("Saved %s", pruned_path)
+
+        save_to_sqlite(engine, df_pruned, symbol, "features_technical_pruned")
+        logger.info("Upserted %s into SQLite (pruned)", symbol)
 
 
 def parse_args() -> argparse.Namespace:
