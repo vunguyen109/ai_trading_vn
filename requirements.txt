@@ -1,0 +1,26 @@
+# AI Trading System - Requirements (Python 3.12.9 compatible)
+# Core Data Science Stack
+pandas==2.2.0
+numpy==1.26.0
+
+# Data Collection
+yfinance==0.2.38  # Phiên bản mới hỗ trợ Python 3.12
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# Database
+sqlalchemy==2.0.25
+
+# Utilities
+python-dotenv==1.0.1
+pyyaml==6.0.1
+schedule==1.2.1
+
+# Development Tools
+jupyter==1.0.0
+ipython==8.22.2
+black==24.1.1
+pytest==7.4.4
+
+# Additional for Python 3.12 compatibility
+typing-extensions==4.10.0

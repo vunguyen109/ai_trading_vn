@@ -1,0 +1,144 @@
+2026-02-08 13:26:19,355 - __main__ - INFO - Database initialized at data/stock_data.db
+2026-02-08 13:26:19,356 - __main__ - INFO - Initialized DataCollector with 10 symbols
+2026-02-08 13:26:19,356 - __main__ - INFO - Starting update for all symbols...
+2026-02-08 13:26:19,356 - __main__ - INFO - First time download for VNINDEX
+2026-02-08 13:26:19,356 - __main__ - INFO - Downloading VNINDEX (^VNINDEX) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:23,359 - yfinance - ERROR - Failed to get ticker '^VNINDEX' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:23,361 - yfinance - ERROR - ^VNINDEX: No timezone found, symbol may be delisted
+2026-02-08 13:26:23,364 - __main__ - WARNING - No data found for VNINDEX (^VNINDEX)
+2026-02-08 13:26:24,366 - __main__ - INFO - First time download for VIC
+2026-02-08 13:26:24,366 - __main__ - INFO - Downloading VIC (VIC.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:26,560 - yfinance - ERROR - Failed to get ticker 'VIC.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:26,560 - yfinance - ERROR - VIC.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:26,560 - __main__ - WARNING - No data found for VIC (VIC.VN)
+2026-02-08 13:26:27,566 - __main__ - INFO - First time download for VHM
+2026-02-08 13:26:27,566 - __main__ - INFO - Downloading VHM (VHM.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:29,967 - yfinance - ERROR - Failed to get ticker 'VHM.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:29,972 - yfinance - ERROR - VHM.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:29,972 - __main__ - WARNING - No data found for VHM (VHM.VN)
+2026-02-08 13:26:30,974 - __main__ - INFO - First time download for VRE
+2026-02-08 13:26:30,974 - __main__ - INFO - Downloading VRE (VRE.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:33,217 - yfinance - ERROR - Failed to get ticker 'VRE.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:33,217 - yfinance - ERROR - VRE.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:33,217 - __main__ - WARNING - No data found for VRE (VRE.VN)
+2026-02-08 13:26:34,220 - __main__ - INFO - First time download for MWG
+2026-02-08 13:26:34,220 - __main__ - INFO - Downloading MWG (MWG.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:36,417 - yfinance - ERROR - Failed to get ticker 'MWG.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:36,433 - yfinance - ERROR - MWG.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:36,435 - __main__ - WARNING - No data found for MWG (MWG.VN)
+2026-02-08 13:26:37,436 - __main__ - INFO - First time download for FPT
+2026-02-08 13:26:37,436 - __main__ - INFO - Downloading FPT (FPT.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:39,670 - yfinance - ERROR - Failed to get ticker 'FPT.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:39,671 - yfinance - ERROR - FPT.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:39,672 - __main__ - WARNING - No data found for FPT (FPT.VN)
+2026-02-08 13:26:40,674 - __main__ - INFO - First time download for VCB
+2026-02-08 13:26:40,674 - __main__ - INFO - Downloading VCB (VCB.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:42,849 - yfinance - ERROR - Failed to get ticker 'VCB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:42,850 - yfinance - ERROR - VCB.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:42,851 - __main__ - WARNING - No data found for VCB (VCB.VN)
+2026-02-08 13:26:43,853 - __main__ - INFO - First time download for TPB
+2026-02-08 13:26:43,853 - __main__ - INFO - Downloading TPB (TPB.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:46,366 - yfinance - ERROR - Failed to get ticker 'TPB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:46,366 - yfinance - ERROR - TPB.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:46,366 - __main__ - WARNING - No data found for TPB (TPB.VN)
+2026-02-08 13:26:47,373 - __main__ - INFO - First time download for CTG
+2026-02-08 13:26:47,374 - __main__ - INFO - Downloading CTG (CTG.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:49,571 - yfinance - ERROR - Failed to get ticker 'CTG.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:49,571 - yfinance - ERROR - CTG.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:49,571 - __main__ - WARNING - No data found for CTG (CTG.VN)
+2026-02-08 13:26:50,577 - __main__ - INFO - First time download for MBB
+2026-02-08 13:26:50,577 - __main__ - INFO - Downloading MBB (MBB.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 13:26:52,854 - yfinance - ERROR - Failed to get ticker 'MBB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:26:52,855 - yfinance - ERROR - MBB.VN: No timezone found, symbol may be delisted
+2026-02-08 13:26:52,855 - __main__ - WARNING - No data found for MBB (MBB.VN)
+2026-02-08 13:26:53,866 - __main__ - INFO - Update completed. Total new records: 0
+2026-02-08 13:26:53,871 - __main__ - INFO - Database connection closed
+2026-02-08 13:30:15,382 - __main__ - INFO - Initialized EnhancedDataCollector with 5 stocks
+2026-02-08 13:30:15,382 - __main__ - INFO - Downloading VNINDEX...
+2026-02-08 13:30:15,382 - __main__ - INFO - Downloading data for VNINDEX
+2026-02-08 13:30:15,382 - __main__ - INFO - Trying Yahoo Finance: ^VNINDEX
+2026-02-08 13:30:19,188 - yfinance - ERROR - Failed to get ticker '^VNINDEX' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:30:19,188 - yfinance - ERROR - ^VNINDEX: No timezone found, symbol may be delisted
+2026-02-08 13:30:19,192 - __main__ - WARNING - Yahoo ^VNINDEX: No data
+2026-02-08 13:30:19,192 - __main__ - INFO - Trying Yahoo Finance: VNI
+2026-02-08 13:30:21,465 - yfinance - ERROR - Failed to get ticker 'VNI' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:30:21,468 - yfinance - ERROR - VNI: No timezone found, symbol may be delisted
+2026-02-08 13:30:21,468 - __main__ - WARNING - Yahoo VNI: No data
+2026-02-08 13:30:21,468 - __main__ - INFO - Trying Yahoo Finance: VNINDEX.VN
+2026-02-08 13:30:23,794 - yfinance - ERROR - Failed to get ticker 'VNINDEX.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 13:30:23,794 - yfinance - ERROR - VNINDEX.VN: No timezone found, symbol may be delisted
+2026-02-08 13:30:23,794 - __main__ - WARNING - Yahoo VNINDEX.VN: No data
+2026-02-08 13:30:23,794 - __main__ - INFO - TradingView download for VNINDEX - Not implemented
+2026-02-08 13:30:23,848 - __main__ - ERROR - Error: name 'np' is not defined
+2026-02-08 21:36:06,016 - __main__ - INFO - Initialized EnhancedDataCollector with 5 stocks
+2026-02-08 21:36:06,016 - __main__ - INFO - Downloading VNINDEX...
+2026-02-08 21:36:06,016 - __main__ - INFO - Downloading data for VNINDEX
+2026-02-08 21:36:06,016 - __main__ - INFO - Trying Yahoo Finance: ^VNINDEX
+2026-02-08 21:36:10,351 - yfinance - ERROR - Failed to get ticker '^VNINDEX' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:36:10,356 - yfinance - ERROR - ^VNINDEX: No timezone found, symbol may be delisted
+2026-02-08 21:36:10,356 - __main__ - WARNING - Yahoo ^VNINDEX: No data
+2026-02-08 21:36:10,356 - __main__ - INFO - Trying Yahoo Finance: VNI
+2026-02-08 21:36:13,321 - yfinance - ERROR - Failed to get ticker 'VNI' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:36:13,321 - yfinance - ERROR - VNI: No timezone found, symbol may be delisted
+2026-02-08 21:36:13,321 - __main__ - WARNING - Yahoo VNI: No data
+2026-02-08 21:36:13,321 - __main__ - INFO - Trying Yahoo Finance: VNINDEX.VN
+2026-02-08 21:36:15,929 - yfinance - ERROR - Failed to get ticker 'VNINDEX.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:36:15,929 - yfinance - ERROR - VNINDEX.VN: No timezone found, symbol may be delisted
+2026-02-08 21:36:15,929 - __main__ - WARNING - Yahoo VNINDEX.VN: No data
+2026-02-08 21:36:15,929 - __main__ - INFO - TradingView download for VNINDEX - Not implemented
+2026-02-08 21:36:15,962 - __main__ - ERROR - Error: name 'np' is not defined
+2026-02-08 21:37:58,611 - __main__ - INFO - Database initialized at data/stock_data.db
+2026-02-08 21:37:58,611 - __main__ - INFO - Initialized DataCollector with 10 symbols
+2026-02-08 21:37:58,611 - __main__ - INFO - Starting update for all symbols...
+2026-02-08 21:37:58,611 - __main__ - INFO - First time download for VNINDEX
+2026-02-08 21:37:58,611 - __main__ - INFO - Downloading VNINDEX (^VNINDEX) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:03,366 - yfinance - ERROR - Failed to get ticker '^VNINDEX' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:03,366 - yfinance - ERROR - ^VNINDEX: No timezone found, symbol may be delisted
+2026-02-08 21:38:03,366 - __main__ - WARNING - No data found for VNINDEX (^VNINDEX)
+2026-02-08 21:38:04,373 - __main__ - INFO - First time download for VIC
+2026-02-08 21:38:04,374 - __main__ - INFO - Downloading VIC (VIC.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:07,171 - yfinance - ERROR - Failed to get ticker 'VIC.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:07,171 - yfinance - ERROR - VIC.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:07,171 - __main__ - WARNING - No data found for VIC (VIC.VN)
+2026-02-08 21:38:08,183 - __main__ - INFO - First time download for VHM
+2026-02-08 21:38:08,183 - __main__ - INFO - Downloading VHM (VHM.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:10,801 - yfinance - ERROR - Failed to get ticker 'VHM.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:10,801 - yfinance - ERROR - VHM.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:10,801 - __main__ - WARNING - No data found for VHM (VHM.VN)
+2026-02-08 21:38:11,809 - __main__ - INFO - First time download for VRE
+2026-02-08 21:38:11,809 - __main__ - INFO - Downloading VRE (VRE.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:15,414 - yfinance - ERROR - Failed to get ticker 'VRE.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:15,414 - yfinance - ERROR - VRE.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:15,414 - __main__ - WARNING - No data found for VRE (VRE.VN)
+2026-02-08 21:38:16,422 - __main__ - INFO - First time download for MWG
+2026-02-08 21:38:16,422 - __main__ - INFO - Downloading MWG (MWG.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:22,491 - yfinance - ERROR - Failed to get ticker 'MWG.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:22,491 - yfinance - ERROR - MWG.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:22,491 - __main__ - WARNING - No data found for MWG (MWG.VN)
+2026-02-08 21:38:23,499 - __main__ - INFO - First time download for FPT
+2026-02-08 21:38:23,499 - __main__ - INFO - Downloading FPT (FPT.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:30,670 - yfinance - ERROR - Failed to get ticker 'FPT.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:30,676 - yfinance - ERROR - FPT.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:30,679 - __main__ - WARNING - No data found for FPT (FPT.VN)
+2026-02-08 21:38:31,682 - __main__ - INFO - First time download for VCB
+2026-02-08 21:38:31,684 - __main__ - INFO - Downloading VCB (VCB.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:37,957 - yfinance - ERROR - Failed to get ticker 'VCB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:37,957 - yfinance - ERROR - VCB.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:37,957 - __main__ - WARNING - No data found for VCB (VCB.VN)
+2026-02-08 21:38:38,963 - __main__ - INFO - First time download for TPB
+2026-02-08 21:38:38,965 - __main__ - INFO - Downloading TPB (TPB.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:45,195 - yfinance - ERROR - Failed to get ticker 'TPB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:45,197 - yfinance - ERROR - TPB.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:45,197 - __main__ - WARNING - No data found for TPB (TPB.VN)
+2026-02-08 21:38:46,203 - __main__ - INFO - First time download for CTG
+2026-02-08 21:38:46,205 - __main__ - INFO - Downloading CTG (CTG.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:52,420 - yfinance - ERROR - Failed to get ticker 'CTG.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:52,424 - yfinance - ERROR - CTG.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:52,427 - __main__ - WARNING - No data found for CTG (CTG.VN)
+2026-02-08 21:38:53,432 - __main__ - INFO - First time download for MBB
+2026-02-08 21:38:53,432 - __main__ - INFO - Downloading MBB (MBB.VN) from 2025-02-08 to 2026-02-08
+2026-02-08 21:38:59,681 - yfinance - ERROR - Failed to get ticker 'MBB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:38:59,686 - yfinance - ERROR - MBB.VN: No timezone found, symbol may be delisted
+2026-02-08 21:38:59,686 - __main__ - WARNING - No data found for MBB (MBB.VN)
+2026-02-08 21:39:00,702 - __main__ - INFO - Update completed. Total new records: 0
+2026-02-08 21:39:00,716 - __main__ - INFO - Database connection closed

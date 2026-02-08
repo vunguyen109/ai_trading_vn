@@ -1,0 +1,163 @@
+📋 ROADMAP - BUILD THEM TUẦN TỰ
+📍 TUẦN 1: DATA FOUNDATION
+text
+MÔ TẢ NGẮN CHO AI:
+"Tôi đang xây Module 1 (Data Engine) của AI Trading System.
+Hiện tại: [Mô tả trạng thái hiện tại]
+Cần tiếp tục: [Công việc tiếp theo]"
+
+VÍ DỤ:
+"Tôi đang xây Module 1 (Data Engine) của AI Trading System.
+Hiện tại: Đã tạo folder structure, cài Python 3.10
+Cần tiếp tục: Viết script collector.py lấy dữ liệu VNINDEX từ yfinance"
+CÔNG VIỆC TUẦN 1:
+
+Day 1: Setup môi trường Python + virtualenv
+
+Day 2: Viết collector.py (lấy 10 cổ phiếu VN30)
+
+Day 3: Viết cleaner.py (xử lý missing data)
+
+Day 4: Tạo SQLite schema + lưu data
+
+Day 5: Viết script update daily (cron job)
+
+📍 TUẦN 2: FEATURE ENGINEERING
+text
+MÔ TẢ NGẮN CHO AI:
+"Tôi đang xây Module 2 (Feature Engine) của AI Trading System.
+Hiện tại: Đã hoàn thành Module 1, data đã sẵn sàng
+Cần tiếp tục: Tạo technical features (RSI, MACD, Volume)"
+CÔNG VIỆC TUẦN 2:
+
+Day 1: Tạo 10 chỉ báo kỹ thuật cơ bản
+
+Day 2: Thêm price transformations (returns, volatility)
+
+Day 3: Tạo lag features (giá 1,3,5 ngày trước)
+
+Day 4: Feature selection (correlation analysis)
+
+Day 5: Tạo feature pipeline chạy hàng ngày
+
+📍 TUẦN 3: MACHINE LEARNING CORE
+text
+MÔ TẢ NGẮN CHO AI:
+"Tôi đang xây Module 3 (ML Engine) của AI Trading System.
+Hiện tại: Đã có đầy đủ features từ Module 2
+Cần tiếp tục: Xây dựng RandomForest model dự đoán direction"
+CÔNG VIỆC TUẦN 3:
+
+Day 1: Define target variable (price_up_next_3_days)
+
+Day 2: Train/test split (walk-forward validation)
+
+Day 3: RandomForest classifier với cross-validation
+
+Day 4: Model evaluation (precision, recall, accuracy)
+
+Day 5: Model persistence (save/load với pickle)
+
+📍 TUẦN 4: BACKTESTING SYSTEM
+text
+MÔ TẢ NGẮN CHO AI:
+"Tôi đang xây Module 4 (Backtest Engine) của AI Trading System.
+Hiện tại: Đã có ML model từ Module 3
+Cần tiếp tục: Tạo backtesting framework với transaction costs"
+CÔNG VIỆC TUẦN 4:
+
+Day 1: Cài backtrader + tạo strategy template
+
+Day 2: Implement ML signals vào strategy
+
+Day 3: Thêm transaction costs + slippage
+
+Day 4: Tính performance metrics (Sharpe, MDD)
+
+Day 5: Visualization backtest results
+
+📍 TUẦN 5: ALERT & DEPLOYMENT
+text
+MÔ TẢ NGẮN CHO AI:
+"Tôi đang xây Module 5 (Alert System) của AI Trading System.
+Hiện tại: Đã backtest thành công strategy
+Cần tiếp tục: Tạo Telegram bot gửi signals hàng ngày"
+CÔNG VIỆC TUẦN 5:
+
+Day 1: Tạo Telegram bot với python-telegram-bot
+
+Day 2: Kết nối bot với ML predictions
+
+Day 3: Thiết kế message format (buy/sell/hold)
+
+Day 4: Tạo simple Streamlit dashboard
+
+Day 5: Schedule daily run với Windows Task Scheduler
+
+🎯 FILE STATUS.TXT TEMPLATE
+(Copy-paste mỗi khi chat với AI)
+
+text
+=== AI TRADING SYSTEM STATUS ===
+PROJECT: ai_trading_vn
+LAST UPDATED: [Ngày cập nhật]
+
+CURRENT MODULE: [1/2/3/4/5]
+MODULE STATUS: [NOT STARTED / IN PROGRESS / COMPLETED]
+
+RECENT WORK:
+- [Công việc vừa làm xong]
+- [File nào đã tạo/sửa]
+- [Kết quả đạt được]
+
+NEXT TASK:
+- [Công việc tiếp theo cần làm]
+- [File cần chỉnh sửa/tạo mới]
+- [Input/output mong đợi]
+
+ERRORS/ISSUES (nếu có):
+- [Lỗi đang gặp]
+- [Đã thử fix thế nào]
+
+CONFIGURATION:
+- Python Version: 3.10
+- OS: Windows 11
+- RAM: 16GB
+- Focus Stocks: VNINDEX + 10 VN30
+- Timeframe: Daily data
+- ML Model: RandomForest (hiện tại)
+🤖 PROMPT TEMPLATE CHO TỪNG TÌNH HUỐNG
+A. KHI BẮT ĐẦU MODULE MỚI:
+text
+"Tôi cần xây dựng [Module X] cho AI Trading System.
+Context: [Mô tả module trước đã hoàn thành]
+Yêu cầu của module này: [Mục tiêu cụ thể]
+Ràng buộc: [Giới hạn về tài nguyên/thời gian]
+
+Hãy cung cấp:
+1. File structure cho module
+2. Code template cho file chính
+3. Hướng dẫn tích hợp với module trước
+4. Test cases để verify"
+B. KHI CONTINUE CÔNG VIỆC:
+text
+"Tôi đang tiếp tục [Module X], file STATUS.txt hiện tại:
+
+[PASTE NỘI DUNG STATUS.TXT Ở ĐÂY]
+
+Hãy giúp tôi hoàn thành NEXT TASK đã đề ra trong status."
+C. KHI GẶP LỖI:
+text
+"Tôi đang gặp lỗi trong [Module X].
+File STATUS.txt hiện tại:
+
+[PASTE STATUS.TXT]
+
+Lỗi cụ thể:
+[PASTE ERROR MESSAGE]
+
+Code liên quan:
+[PASTE RELEVANT CODE SNIPPET]
+
+Đã thử fix bằng cách: [Mô tả cách đã thử]
+Hãy giúp debug và sửa lỗi."
