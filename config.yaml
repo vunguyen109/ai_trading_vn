@@ -1,0 +1,59 @@
+# config.yaml - AI TRADING SYSTEM
+system:
+  version: "1.0"
+  mode: "development"  # development/production
+
+data:
+  symbols:
+    - "VNINDEX"
+    - "VIC"
+    - "VHM"
+    - "VRE"
+    - "MWG"
+    - "FPT"
+    - "VCB"
+    - "TPB"
+    - "CTG"
+    - "MBB"
+  source: "yfinance"
+  update_frequency: "daily"  # daily/weekly
+  history_days: 365
+
+features:
+  technical_indicators:
+    - "rsi"
+    - "macd"
+    - "bollinger_bands"
+    - "sma_20"
+    - "sma_50"
+    - "volume_sma"
+    - "atr"
+    - "stochastic"
+  window_sizes: [1, 3, 5, 10]
+
+ml:
+  model_type: "random_forest"
+  target: "price_up_next_3_days"
+  test_size: 0.2
+  hyperparameters:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+
+backtest:
+  initial_capital: 1000000000  # 1 tỷ VND
+  commission: 0.0015  # 0.15%
+  slippage: 0.001  # 0.1%
+
+alerts:
+  telegram:
+    enabled: false
+    bot_token: "YOUR_TOKEN"
+    chat_id: "YOUR_CHAT_ID"
+  email:
+    enabled: false
+
+schedule:
+  data_collection: "17:00"  # Sau giờ giao dịch
+  prediction: "18:00"
+  alert: "19:00"
