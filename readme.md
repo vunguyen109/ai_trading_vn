@@ -29,31 +29,38 @@ Mục tiêu: xây dựng hệ thống hỗ trợ quyết định cho nhà đầu
 
 ## Cấu trúc dự án
 
+```
 ai_trading_vn/
-
-- data/ — thu thập & lưu trữ dữ liệu
-  - collector.py
-  - cleaner.py
-  - database.db (mẫu)
-- features/ — tính toán indicators
-  - technical.py
-  - fundamental.py
-  - sentiment.py
-- models/ — huấn luyện & dự đoán
-  - trainer.py
-  - predictor.py
-  - trained_models/
-- backtest/ — engine và chiến lược
-  - engine.py
-  - strategies.py
-  - results/
-- alerts/ — Telegram bot & dashboard
-  - telegram_bot.py
-  - dashboard.py
-- config.yaml — cấu hình hệ thống
-- requirements.txt — phụ thuộc Python
-- main.py — entrypoint (runner)
-- STATUS.txt — mẫu trạng thái dự án
+│
+├── 📂 data/                    # MODULE 1
+│   ├── collector.py           # Thu thập dữ liệu
+│   ├── cleaner.py             # Xử lý missing data
+│   └── database.db            # SQLite database
+│
+├── 📂 features/               # MODULE 2  
+│   ├── technical.py           # Chỉ báo kỹ thuật
+│   ├── fundamental.py         # Dữ liệu cơ bản (nếu có)
+│   └── sentiment.py           # Phân tích tin tức
+│
+├── 📂 models/                 # MODULE 3
+│   ├── trainer.py             # Training pipeline
+│   ├── predictor.py           # Dự đoán
+│   └── trained_models/        # Lưu model
+│
+├── 📂 backtest/               # MODULE 4
+│   ├── engine.py              # Backtesting engine
+│   ├── strategies.py          # Các chiến lược
+│   └── results/               # Kết quả backtest
+│
+├── 📂 alerts/                 # MODULE 5
+│   ├── telegram_bot.py        # Gửi cảnh báo
+│   └── dashboard.py           # Giao diện web đơn giản
+│
+├── config.yaml               # Cấu hình hệ thống
+├── requirements.txt          # Thư viện cần cài
+├── main.py                  # Chạy toàn bộ hệ thống
+└── STATUS.txt               # FILE QUAN TRỌNG: Trạng thái hiện tại
+```
 
 ## Roadmap theo tuần
 
@@ -76,7 +83,7 @@ ai_trading_vn/
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
+.venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
