@@ -1,4 +1,4 @@
-# config.yaml - AI TRADING SYSTEM
+﻿# config.yaml - AI TRADING SYSTEM
 system:
   version: "1.0"
   mode: "development"  # development/production
@@ -15,9 +15,11 @@ data:
     - "TPB"
     - "CTG"
     - "MBB"
-  source: "yfinance"
+  source: "vnstock"
+  provider: "KBS"
   update_frequency: "daily"  # daily/weekly
   history_days: 365
+  database: "data/database.db"
 
 features:
   technical_indicators:
@@ -41,7 +43,7 @@ ml:
     min_samples_split: 5
 
 backtest:
-  initial_capital: 1000000000  # 1 tỷ VND
+  initial_capital: 1000000000  # 1 ty VND
   commission: 0.0015  # 0.15%
   slippage: 0.001  # 0.1%
 
@@ -54,6 +56,6 @@ alerts:
     enabled: false
 
 schedule:
-  data_collection: "17:00"  # Sau giờ giao dịch
+  data_collection: "17:00"  # After market close
   prediction: "18:00"
   alert: "19:00"

@@ -1,28 +1,29 @@
-=== AI TRADING SYSTEM STATUS ===
+﻿=== AI TRADING SYSTEM STATUS ===
 PROJECT: ai_trading_vn
-LAST UPDATED: [Ngày hôm nay]
+LAST UPDATED: 2026-02-08
 
-CURRENT MODULE: 1 - Data Engine
+CURRENT MODULE: 2 - Feature Engineering
 MODULE STATUS: IN PROGRESS
 
 RECENT WORK:
-- Đã cập nhật requirements.txt cho Python 3.12.9
-- Đã tạo setup_environment.py
-- Đang chuẩn bị chạy data collector
+- Completed Module 1 (Data Engine) pipeline
+- Added features/technical.py for technical indicators pipeline
+- Technical features saved to CSV and SQLite (features_technical)
 
 NEXT TASK:
-- Chạy thử collector với Python 3.12.9
-- Xử lý các dependency issues nếu có
-- Commit code lên GitHub
+- Run technical features pipeline on cleaned data
+- Review feature outputs and handle NaN warmup
+- Add additional feature transforms if needed (returns, volatility, lags)
 
-ERRORS/ISSUES (nếu có):
-- Chưa chạy thử nên chưa biết lỗi
+ERRORS/ISSUES (neu co):
+- Previous yfinance failures for CTG/MBB; switched to vnstock
+- Chua chay thu nen chua biet loi
 
 CONFIGURATION:
-- Python Version: 3.12.9 ✓
+- Python Version: 3.12.9
 - OS: Windows 11
 - RAM: 16GB
 - Focus Stocks: VNINDEX + 9 VN30
 - Timeframe: Daily data
-- Database: SQLite
-- Virtual Environment: venv (chưa tạo)
+- Database: SQLite (data/database.db)
+- Virtual Environment: venv (chua tao)

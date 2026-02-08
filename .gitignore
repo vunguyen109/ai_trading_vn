@@ -22,3 +22,9 @@ dist/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Data outputs
+data/raw/
+data/clean/
+data/features/
+data/database.db

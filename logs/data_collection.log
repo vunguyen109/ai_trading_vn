@@ -142,3 +142,95 @@
 2026-02-08 21:38:59,686 - __main__ - WARNING - No data found for MBB (MBB.VN)
 2026-02-08 21:39:00,702 - __main__ - INFO - Update completed. Total new records: 0
 2026-02-08 21:39:00,716 - __main__ - INFO - Database connection closed
+2026-02-08 21:46:30,881 - __main__ - INFO - Initialized EnhancedDataCollector with 5 stocks
+2026-02-08 21:46:30,881 - __main__ - INFO - Downloading VNINDEX...
+2026-02-08 21:46:30,881 - __main__ - INFO - Downloading data for VNINDEX
+2026-02-08 21:46:30,881 - __main__ - INFO - Trying Yahoo Finance: ^VNINDEX
+2026-02-08 21:46:34,978 - yfinance - ERROR - Failed to get ticker '^VNINDEX' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:34,990 - yfinance - ERROR - ^VNINDEX: No timezone found, symbol may be delisted
+2026-02-08 21:46:34,990 - __main__ - WARNING - Yahoo ^VNINDEX: No data
+2026-02-08 21:46:34,990 - __main__ - INFO - Trying Yahoo Finance: VNI
+2026-02-08 21:46:37,813 - yfinance - ERROR - Failed to get ticker 'VNI' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:37,813 - yfinance - ERROR - VNI: No timezone found, symbol may be delisted
+2026-02-08 21:46:37,813 - __main__ - WARNING - Yahoo VNI: No data
+2026-02-08 21:46:37,813 - __main__ - INFO - Trying Yahoo Finance: VNINDEX.VN
+2026-02-08 21:46:40,431 - yfinance - ERROR - Failed to get ticker 'VNINDEX.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:40,431 - yfinance - ERROR - VNINDEX.VN: No timezone found, symbol may be delisted
+2026-02-08 21:46:40,431 - __main__ - WARNING - Yahoo VNINDEX.VN: No data
+2026-02-08 21:46:40,431 - __main__ - INFO - TradingView download for VNINDEX - Not implemented
+2026-02-08 21:46:40,544 - __main__ - INFO - Downloading VIC...
+2026-02-08 21:46:40,544 - __main__ - INFO - Downloading data for VIC
+2026-02-08 21:46:40,544 - __main__ - INFO - Trying Yahoo Finance: VIC.HM
+2026-02-08 21:46:43,303 - yfinance - ERROR - Failed to get ticker 'VIC.HM' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:43,303 - yfinance - ERROR - VIC.HM: No timezone found, symbol may be delisted
+2026-02-08 21:46:43,303 - __main__ - WARNING - Yahoo VIC.HM: No data
+2026-02-08 21:46:43,303 - __main__ - INFO - Trying Yahoo Finance: VIC.VN
+2026-02-08 21:46:46,169 - yfinance - ERROR - Failed to get ticker 'VIC.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:46,173 - yfinance - ERROR - VIC.VN: No timezone found, symbol may be delisted
+2026-02-08 21:46:46,173 - __main__ - WARNING - Yahoo VIC.VN: No data
+2026-02-08 21:46:46,173 - __main__ - INFO - Trying Yahoo Finance: VIC
+2026-02-08 21:46:49,327 - yfinance - ERROR - Failed to get ticker 'VIC' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:49,329 - yfinance - ERROR - VIC: No timezone found, symbol may be delisted
+2026-02-08 21:46:49,329 - __main__ - WARNING - Yahoo VIC: No data
+2026-02-08 21:46:49,329 - __main__ - INFO - TradingView download for VIC - Not implemented
+2026-02-08 21:46:49,846 - __main__ - INFO - Downloading VHM...
+2026-02-08 21:46:49,846 - __main__ - INFO - Downloading data for VHM
+2026-02-08 21:46:49,846 - __main__ - INFO - Trying Yahoo Finance: VHM.HM
+2026-02-08 21:46:53,068 - yfinance - ERROR - Failed to get ticker 'VHM.HM' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:53,068 - yfinance - ERROR - VHM.HM: No timezone found, symbol may be delisted
+2026-02-08 21:46:53,068 - __main__ - WARNING - Yahoo VHM.HM: No data
+2026-02-08 21:46:53,068 - __main__ - INFO - Trying Yahoo Finance: VHM.VN
+2026-02-08 21:46:57,253 - yfinance - ERROR - Failed to get ticker 'VHM.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:46:57,253 - yfinance - ERROR - VHM.VN: No timezone found, symbol may be delisted
+2026-02-08 21:46:57,253 - __main__ - WARNING - Yahoo VHM.VN: No data
+2026-02-08 21:46:57,253 - __main__ - INFO - Trying Yahoo Finance: VHM
+2026-02-08 21:47:01,659 - yfinance - ERROR - Failed to get ticker 'VHM' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:01,660 - yfinance - ERROR - VHM: No timezone found, symbol may be delisted
+2026-02-08 21:47:01,660 - __main__ - WARNING - Yahoo VHM: No data
+2026-02-08 21:47:01,660 - __main__ - INFO - TradingView download for VHM - Not implemented
+2026-02-08 21:47:02,189 - __main__ - INFO - Downloading FPT...
+2026-02-08 21:47:02,189 - __main__ - INFO - Downloading data for FPT
+2026-02-08 21:47:02,189 - __main__ - INFO - Trying Yahoo Finance: FPT.HM
+2026-02-08 21:47:06,359 - yfinance - ERROR - Failed to get ticker 'FPT.HM' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:06,359 - yfinance - ERROR - FPT.HM: No timezone found, symbol may be delisted
+2026-02-08 21:47:06,359 - __main__ - WARNING - Yahoo FPT.HM: No data
+2026-02-08 21:47:06,359 - __main__ - INFO - Trying Yahoo Finance: FPT.VN
+2026-02-08 21:47:10,565 - yfinance - ERROR - Failed to get ticker 'FPT.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:10,565 - yfinance - ERROR - FPT.VN: No timezone found, symbol may be delisted
+2026-02-08 21:47:10,565 - __main__ - WARNING - Yahoo FPT.VN: No data
+2026-02-08 21:47:10,565 - __main__ - INFO - Trying Yahoo Finance: FPT
+2026-02-08 21:47:14,561 - yfinance - ERROR - Failed to get ticker 'FPT' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:14,561 - yfinance - ERROR - FPT: No timezone found, symbol may be delisted
+2026-02-08 21:47:14,561 - __main__ - WARNING - Yahoo FPT: No data
+2026-02-08 21:47:14,561 - __main__ - INFO - TradingView download for FPT - Not implemented
+2026-02-08 21:47:15,086 - __main__ - INFO - Downloading VCB...
+2026-02-08 21:47:15,086 - __main__ - INFO - Downloading data for VCB
+2026-02-08 21:47:15,086 - __main__ - INFO - Trying Yahoo Finance: VCB.HM
+2026-02-08 21:47:19,268 - yfinance - ERROR - Failed to get ticker 'VCB.HM' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:19,272 - yfinance - ERROR - VCB.HM: No timezone found, symbol may be delisted
+2026-02-08 21:47:19,272 - __main__ - WARNING - Yahoo VCB.HM: No data
+2026-02-08 21:47:19,272 - __main__ - INFO - Trying Yahoo Finance: VCB.VN
+2026-02-08 21:47:23,468 - yfinance - ERROR - Failed to get ticker 'VCB.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:23,473 - yfinance - ERROR - VCB.VN: No timezone found, symbol may be delisted
+2026-02-08 21:47:23,473 - __main__ - WARNING - Yahoo VCB.VN: No data
+2026-02-08 21:47:23,473 - __main__ - INFO - Trying Yahoo Finance: VCB
+2026-02-08 21:47:27,455 - yfinance - ERROR - Failed to get ticker 'VCB' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:27,455 - yfinance - ERROR - VCB: No timezone found, symbol may be delisted
+2026-02-08 21:47:27,455 - __main__ - WARNING - Yahoo VCB: No data
+2026-02-08 21:47:27,455 - __main__ - INFO - TradingView download for VCB - Not implemented
+2026-02-08 21:47:27,988 - __main__ - INFO - Downloading MWG...
+2026-02-08 21:47:27,988 - __main__ - INFO - Downloading data for MWG
+2026-02-08 21:47:27,988 - __main__ - INFO - Trying Yahoo Finance: MWG.HM
+2026-02-08 21:47:32,277 - yfinance - ERROR - Failed to get ticker 'MWG.HM' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:32,277 - yfinance - ERROR - MWG.HM: No timezone found, symbol may be delisted
+2026-02-08 21:47:32,277 - __main__ - WARNING - Yahoo MWG.HM: No data
+2026-02-08 21:47:32,277 - __main__ - INFO - Trying Yahoo Finance: MWG.VN
+2026-02-08 21:47:36,449 - yfinance - ERROR - Failed to get ticker 'MWG.VN' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:36,453 - yfinance - ERROR - MWG.VN: No timezone found, symbol may be delisted
+2026-02-08 21:47:36,453 - __main__ - WARNING - Yahoo MWG.VN: No data
+2026-02-08 21:47:36,455 - __main__ - INFO - Trying Yahoo Finance: MWG
+2026-02-08 21:47:40,569 - yfinance - ERROR - Failed to get ticker 'MWG' reason: Expecting value: line 1 column 1 (char 0)
+2026-02-08 21:47:40,569 - yfinance - ERROR - MWG: No timezone found, symbol may be delisted
+2026-02-08 21:47:40,569 - __main__ - WARNING - Yahoo MWG: No data
+2026-02-08 21:47:40,569 - __main__ - INFO - TradingView download for MWG - Not implemented
+2026-02-08 21:47:41,128 - __main__ - ERROR - Error: table stock_prices has no column named source
